@@ -1,5 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12241619&assignment_repo_type=AssignmentRepo)
-# Título do Projeto
+# Petting
 
 `CURSO: Sistemas de Informação`
 
@@ -9,17 +9,21 @@
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
+  A nova geração está mais inclinada a adotar, assim como está mais conectada. A forma é aumentar a comunicação com esse grupo, com o intuito de trazer mais informação, viabilizar a comunicação com os mesmos, com as  gerações próximas a eles e dar a eles a linguagem mais próxima, fazendo um site capaz de conversar com essa geração e as demais que estão conectadas a internet.
+Sendo assim, neste trabalho será  desenvolvido um site com a finalidade de facilitar a adoção para as pessoas com acesso à internet.   Possibilitando praticidade e segurança na hora da adoção, o que estará ajudará a trazer as pessoas para mais próximas dos animais, como também ajudará a população em geral, diminuindo os animais em situação de rua, o abandono e possíveis doenças que podem ser transmitidas se os animais não estiverem em um local adequado. Dessa maneira, a ideia é aproximar quem tem interesse em aumentar sua família com um pet, dos animais disponíveis para a adoção.
+
+
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* João Garcia
+* Julio Cesar Claudino Carvalho
+* Laura de Freitas Mendes Losque
+* Luana Horta de Souza
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Prof. Mestre Nesley Jesus Daher de Oliveira.
 
 # Planejamento
 
