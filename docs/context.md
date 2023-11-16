@@ -1,54 +1,41 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+A tecnologia tem se mostrado uma grande aliada nos dias atuais para tentar solucionar os problemas de nossa sociedade. A internet principalmente possibilita o acesso à informação, conscientizando as pessoas e abrindo a mente das mesmas para realidades diferentes que antes só eram possíveis de serem experienciadas com contato pessoal, o que era muito restrito. Hoje as pessoas têm acesso ao mundo na palma de suas mãos e podem escolher o que acessam possibilitando a descoberta de novas realidades.
+Dessa forma é possível se questionar, como utilizar toda essa rede de computadores para facilitar a adoção de animais? Como tornar mais acessível, prático e atualizado o modo de trazer um novo integrante para a família das pessoas? 
+A nova geração está mais inclinada a adotar, assim como está mais conectada. A forma é aumentar a comunicação com esse grupo, com o intuito de trazer mais informação, viabilizar a comunicação com os mesmos, com as  gerações próximas a eles e dar a eles a linguagem mais próxima, fazendo um software capaz de conversar com essa geração e as demais que estão conectadas a internet.
+Sendo assim, neste trabalho será  desenvolvido um software com a finalidade de facilitar a adoção para as pessoas com acesso à internet. Possibilitando praticidade e segurança na hora da adoção, o que estará ajudará a trazer as pessoas para mais próximas dos animais, como também ajudará a população em geral, diminuindo os animais em situação de rua, o abandono e possíveis doenças que podem ser transmitidas se os animais não estiverem em um local adequado. Dessa maneira, a ideia é aproximar quem tem interesse em aumentar sua família com um pet, dos animais disponíveis para a adoção.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Com a utilização de um software, como é possível aumentar a adoção de animais? 
+É necessário aumentar a adoção de animais.  O software será utilizado por uma empresa/ONG que tem como objetivo, aumentar o número de adoções disponibilizando assim para possível adotante a opção de conhecer os animais e suas personalidades através do software.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+O objetivo geral deste trabalho, é atingir e sensibilizar, o maior número de pessoas, para a adoção de pets recolhidos no centro e região metropolitana da instituição que irá utilizar o software.
  
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos específicos:
+
+Conscientizar sobre a importância da adoção de animais.
+Aplicar os conhecimentos adquiridos para desenvolver o software.
+Permitir que usuários possam se cadastrar e ter os dados verificados.
+Permitir a vinculação de outras plataformas de natureza semelhante, para viabilizar a comunicação entre os usuários com objetivo de adoção de animais.
+Aumentar o número de animais adotados.
+Permitir ao usuário filtrar resultados de busca.
+Fornecer relatórios de preferência dos usuários.
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A adoção de animais é um assunto de extrema importância na sociedade atual porque os animais são parte do dia-a-dia da população. Caso estejam em situação de rua podem representar um perigo para si mesmos e serem vetores de doenças, apresentando um risco para as pessoas. 
+O projeto se justifica na medida em que há uma necessidade de aumentar o número de animais adotados que irão ter um destino diferente das ruas, em um novo lar, o que possivelmente pode salvar suas vidas. Há também o fator de redução do abandono, pois a demanda por compra de animais é reduzida e consequentemente o impacto ambiental e o custo também diminuem, já que a adoção costuma ter um custo menor em relação a compra e a demanda por criadouros de animais para reprodução, e o comércio diminui, pois terão mais famílias recorrendo a adoção para encontrar um pet. 
+A ideia é trazer de uma maneira mais atualizada a forma de adotar, colocando os usuários mais próximos da linguagem que eles conhecem e incentivando que eles  adotem e não comprem. Permitindo que as pessoas também orbitem ao redor do software para que essas sejam multiplicadoras da comunicação através da vinculação de outras plataformas, e dando também mais segurança para as mesmas e os animais através dos cadastros feitos na plataforma e da verificação de seus dados.
+ A relevância desse software para os dias atuais se dá principalmente porque estamos em uma época em que as pessoas estão preferindo ter animais a filhos, o pet parenting (VALERI, 2023). Mas, apesar do número de pessoas que pensam em adotar, ter crescido no Brasil nas últimas gerações, ainda há um grande caminho a ser percorrido. E já que há um maior interesse e conscientização da nova geração, que já cresceu com internet (MAFRA, 2020), facilitaria a adoção, se eles tivessem acesso aos animais que estão disponíveis e personalidade dos pets, de forma virtual.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público alvo que o software se destina é para homens e mulheres, adultos e jovens adultos, que tenham condições financeiras de manter um animal, moradores da região central e metropolitana de onde a ONG está localizada, que desejam ter um animal para ser um novo integrante da família. 
+Estudos demográficos indicam que a grande maioria (82%) dos tutores de pets são jovens e adultos entre 18 e 44 anos com renda superior a R$ 7.200 (SC, 2022). Outro dado importante, é a predominância de mulheres e famílias, contando casais, entre os tutores (LOURENÇO, 2020).  Os animais mais adotados são os cachorros, 54 milhões; aves, 39 milhões; gatos, 24 milhões; peixes, 19 milhões; e outros, 2 milhões (SC,2022).
