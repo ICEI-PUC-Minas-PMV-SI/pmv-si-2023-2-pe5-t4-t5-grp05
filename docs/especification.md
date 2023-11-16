@@ -53,15 +53,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A interface de registro deve ser intuitiva e de fácil uso para garantir que os usuários possam se inscrever sem dificuldade. | ALTA |
-
-|RNF-002| O sistema deve armazenar os dados do usuários. | ALTA |
-
-|RNF-003| As imagens dos animais devem ser otimizadas para carregamento rápido. | MÉDIA |
-
-|RNF-004| O algoritmo de recomendação deve ser eficiente e fornecer resultados relevantes. | MÉDIA |
-
-|RNF-005| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA |
+|RNF-001| A interface de registro deve ser intuitiva e de fácil uso para garantir que os usuários possam se inscrever sem dificuldade. | ALTA ||
+|RNF-002| O sistema deve armazenar os dados do usuários. | ALTA ||
+|RNF-003| As imagens dos animais devem ser otimizadas para carregamento rápido. | MÉDIA ||
+|RNF-004| O algoritmo de recomendação deve ser eficiente e fornecer resultados relevantes. | MÉDIA ||
+|RNF-005| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA ||
 
 
 
@@ -72,11 +68,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 
-|R-001| O projeto deverá ser entregue até o final do semestre, isso pode limitar o escopo do projeto e afetar a quantidade de recursos.
-
-|R-002| Restrições de determinadas tecnologias ou plataformas devido a considerações técnicas ou de segurança.
-
-|R-003| A disponibilidade do pessoal.
+|R-001| O projeto deverá ser entregue até o final do semestre, isso pode limitar o escopo do projeto e afetar a quantidade de recursos.|
+|R-002| Restrições de determinadas tecnologias ou plataformas devido a considerações técnicas ou de segurança.|
+|R-003| A disponibilidade do pessoal.|
 
 
 
