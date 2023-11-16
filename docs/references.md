@@ -1,19 +1,10 @@
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizadas no desenvolvimento do trabalho.
+LOURENÇO, Beatriz. Adoção de pets é uma tendência no Brasil, aponta pesquisa: De acordo com estudo, 33% dos cães e 59% dos gatos que moram nos lares brasileiros foram adotados, o que se deve à mudança de comportamento da população. [S. l.]: Galileu, 19 set. 2020. Disponível em: <https://revistagalileu.globo.com/Sociedade/noticia/2020/09/adocao-de-pets-e-uma-tendencia-em-territorio-brasileiro.html>. Acesso em: 15 set. 2023.
 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/referencias/)
+MAFRA, Anderson. Adotar ou comprar cachorro ou gato? Pesquisa mostra preferência dos brasileiros: Afinal, adotar ou comprar cachorro ou gato? Veja a preferência dos brasileiros com base em um estudo feito pela PoderData e os principais benefícios de adotar um animal abandonado!. [S. l.], 6 nov. 2020. Disponível em: <https://www.petlove.com.br/dicas/pesquisa-mostra-que-brasileiros-preferem-adotar-do-que-comprar-pets#:~:text=Os%20brasileiros%20preferem%20adotar!,t%C3%AAm%20um%20lar%20para%20morar>. Acesso em: 12 set. 2023.
 
-Exemplos de referências bibliográficas:
+SC, Negócios. Mercado pet: veja os dados do setor e perfil do público. Florianópolis/SC: Negócios SC, 6 set. 2022. Disponível em: <https://www.negociossc.com.br/blog/mercado-pet-veja-os-dados-do-setor-e-perfil-do-publico/#:~:text=Voltando%20agora%20aos%20dados%20da,na%20classe%20B%20(46%25)>. Acesso em: 15 set. 2023.
 
-**[1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
+VALERI, Julia. Cresce o número de famílias que preferem ter pets em vez de filhos: O aumento na preferência por animais de estimação em vez de filhos reflete mudanças na sociedade e na dinâmica familiar, alegam especialistas. 1ª edição. ed. Campus Ribeirão Preto: Jornal da USP no Ar, 21 jun. 2023. Disponível em:<https://jornal.usp.br/campus-ribeirao-preto/cresce-o-numero-de-familias-que-preferem-ter-pets-em-vez-de-filhos/>. Acesso em: 12 set. 2023.
 
