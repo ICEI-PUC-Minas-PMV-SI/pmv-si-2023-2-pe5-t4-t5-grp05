@@ -4,7 +4,7 @@
 
 ## User Flow
 
-![Petting (Copy)](img/Petting (Copy).png)
+![userflow](img/userflow.png)
 
 
 
