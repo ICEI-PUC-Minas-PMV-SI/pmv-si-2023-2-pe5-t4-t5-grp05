@@ -67,10 +67,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-
-|R-001|  O projeto deverá ser entregue até o final do semestre, isso pode limitar o escopo do projeto e afetar a quantidade de recursos. |
-|R-002|  Restrições de determinadas tecnologias ou plataformas devido a considerações técnicas ou de segurança. |
-|R-003|  A disponibilidade do pessoal. |
+|R-001|  O projeto deverá ser entregue até o final do semestre, isso pode limitar o escopo do projeto e afetar a quantidade de recursos.|
+|R-002|  Restrições de determinadas tecnologias ou plataformas devido a considerações técnicas ou de segurança.|
+|R-003|  A disponibilidade do pessoal.|
 
 
 
