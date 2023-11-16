@@ -21,19 +21,13 @@
  
 Objetivos específicos:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Conscientizar sobre a importância da adoção de animais.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Aplicar os conhecimentos adquiridos para desenvolver o software.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Permitir que usuários possam se cadastrar e ter os dados verificados.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Permitir a vinculação de outras plataformas de natureza semelhante, para viabilizar a comunicação entre os usuários com objetivo de adoção de animais.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Aumentar o número de animais adotados.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Permitir ao usuário filtrar resultados de busca.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Fornecer relatórios de preferência dos usuários.
+*Conscientizar sobre a importância da adoção de animais.
+*Aplicar os conhecimentos adquiridos para desenvolver o software.
+*Permitir que usuários possam se cadastrar e ter os dados verificados.
+*Permitir a vinculação de outras plataformas de natureza semelhante, para viabilizar a comunicação entre os usuários com objetivo de adoção de animais.
+*Aumentar o número de animais adotados.
+*Permitir ao usuário filtrar resultados de busca.
+*Fornecer relatórios de preferência dos usuários.
 
 
 ## Justificativa
