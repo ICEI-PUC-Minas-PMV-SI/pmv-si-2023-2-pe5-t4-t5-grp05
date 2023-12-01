@@ -22,5 +22,30 @@
         </div>
     </div>
 </body>
+<script>
+    const confirm = (event) => {
+        const data = JSON.parse(localStorage.getItem('Data'));
+        const inputValue = document.querySelectorAll('input');
+        let stop = false
+
+        data.map((val, index) => {
+            if (stop) return;
+
+            if (val.name === inputValue[0].value && val.password === inputValue[1].value) {
+                let user = { name: val.name, emai: val.email }
+                window.localStorage.setItem("User", JSON.stringify(user));
+                stop = true;
+                alert("Login feito com sucesso");
+            };
+        });
+
+        if (!stop) {
+            alert("Usuario ou senha incorreta");
+        } else {
+            // window.location.href = "Coloque o caminho do arquivo aqui";
+        };
+    };
+
+</script>
 
 </html>

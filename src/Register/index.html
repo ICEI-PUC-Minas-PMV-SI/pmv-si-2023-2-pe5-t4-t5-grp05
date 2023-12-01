@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="../../public/images/logo.png" alt="não foi possível carregar a imagem">
+    </div>
+    <div class="backgroundImage">
+        <div class="container">
+            <h1>Cadastrar</h1>
+            <form onsubmit="confirm(event)">
+                <input type="text" id="name" name="name" placeholder="Nome">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="password" id="password" name="password" placeholder="Senha">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha">
+                <a href="../Login/index.html">Entrar</a>
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    const confirm = (event) => {
+        event.preventDefault(); // Evita o envio padrão do formulário
+        let data = [];
+        const inputValue = document.querySelectorAll('input');
+        const form = { name: inputValue[0].value, email: inputValue[1].value, password: inputValue[2].value };
+        const dataTemp = window.localStorage.getItem("Data") ? JSON.parse(localStorage.getItem('Data')) : [];
+
+        if (inputValue[0].value === 0 || inputValue[1].value === 0 || inputValue[2].value === 0 || inputValue[3].value === 0) {
+            console.log('entro');
+            alert("Todos os campos devem ser preenchidos");
+            return;
+        } else {
+            if (inputValue[2].value === inputValue[3].value) {
+                data = [...dataTemp, form];
+                window.localStorage.setItem("Data", JSON.stringify(data));
+                window.location.href = "../Login/index.html";
+                alert('Cadastro realizado com sucesso');
+            } else {
+                alert('As senhas tem que ser iguais.');
+            };
+        };
+    };
+
+</script>
+
+</html>
