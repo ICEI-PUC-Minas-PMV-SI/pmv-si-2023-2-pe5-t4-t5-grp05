@@ -140,7 +140,20 @@ h2 {
     background:transparent;
 }
 
-
+.buttonChat {
+    position: absolute;
+    top: 77.75%;
+    margin-left: 35%;
+    border: none;
+    width: 90px;
+    height: 90px;
+    margin-left: px;
+    margin-top: px;
+    background-image: url('./Public/images/chat.png');
+    background-size: cover;
+    background-color: none;
+    border-radius: 60%;
+}
   
 
   

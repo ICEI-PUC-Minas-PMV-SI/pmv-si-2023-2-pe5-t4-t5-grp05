@@ -111,6 +111,8 @@ h2 {
     background: transparent;
 }
 
+
+
 /* foto pets */
 .backgroundImage img {
     position: absolute;
@@ -122,3 +124,16 @@ h2 {
     border-radius: 30px;
     z-index: 1;
 }
+
+.login {
+    position: absolute;
+    padding: 0%;
+    top: 65%;
+    margin-left: 13%;
+    width: 120px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 77px;
+    background: rgba(67, 142, 255, 0.78);
+    border: none;
+  }
