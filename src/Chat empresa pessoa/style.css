@@ -89,7 +89,7 @@ body {
     }
     
     .personButton img{
-    width: 40px;
+    width: 100%;
     border-radius: 100%;
     }
     
@@ -115,6 +115,7 @@ body {
     grid-template-columns: 0 50px auto;
     column-gap: 15px;
     align-items: center;
+    display: flex;
     }
     
     #text {
@@ -122,8 +123,15 @@ body {
     font-size: 20px;
     font-style: normal;
     text-overflow: inherit;
+    margin-left: 20px;
+    margin-bottom: 60px;
     }
     
+    .fotoTopo {
+    position: absolute;
+    margin-left: 1%;
+    }
+
     .logo  {
     width: 45px;
     height: 45px;
@@ -132,7 +140,40 @@ body {
     border-radius: 100%;
     grid-column: 2;
     }
+
+    .nomeUsuario {
+    position: absolute;
+    margin-left: 5%;
+    }
+
+    /* CHAT*/
+
+    .oEspacoDoChat {
+    max-height: calc(100%-160px);
+    margin: 0 auto;
+    padding: 20px;
+    }
+
     
+
+    .mensagemQueChega {
+    background-color: #D9D9D9;
+    align-self: flex-start ;
+    border-radius: 10px;
+    width: 60%;
+    }
+
+
+    .mensagemQueVai {
+    background-color: #AAAAAA;
+    margin: auto;
+    margin-right: 0;
+    border-radius: 10px;
+    width: 60%;
+    }
+
+
+        
     .caixaDeTexto {
     height: 100%;
     background-color: #D9D9D9; 
@@ -163,5 +204,57 @@ body {
     background-image: url('./public/sendButton.png');
     background-size: cover;
     margin: auto;
+    }
+
+/* fotos usuarios */
+
+    .avatar1 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar2 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar3 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar4 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar5 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar6 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar7 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar8 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar9 {
+        width: 40px;
+        border-radius: 100%
+    }
+
+    .avatar10 {
+        width: 40px;
+        border-radius: 100%
     }
     
