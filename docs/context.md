@@ -4,15 +4,15 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Dessa forma é possível se questionar, como utilizar toda essa rede de computadores para facilitar a adoção de animais? Como tornar mais acessível, prático e atualizado o modo de trazer um novo integrante para a família das pessoas? 
 
-&nbsp;&nbsp;&nbsp;&nbsp;A nova geração está mais inclinada a adotar, assim como está mais conectada. A forma é aumentar a comunicação com esse grupo, com o intuito de trazer mais informação, viabilizar a comunicação com os mesmos, com as  gerações próximas a eles e dar a eles a linguagem mais próxima, fazendo um software capaz de conversar com essa geração e as demais que estão conectadas a internet.
+&nbsp;&nbsp;&nbsp;&nbsp;A nova geração está mais inclinada a adotar, assim como está mais conectada. A forma é aumentar a comunicação com esse grupo, com o intuito de trazer mais informação, viabilizar a comunicação com os mesmos, com as  gerações próximas a eles e dar a eles a linguagem mais próxima, fazendo um site capaz de conversar com essa geração e as demais que estão conectadas a internet.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Sendo assim, neste trabalho será  desenvolvido um software com a finalidade de facilitar a adoção para as pessoas com acesso à internet. Possibilitando praticidade e segurança na hora da adoção, o que estará ajudará a trazer as pessoas para mais próximas dos animais, como também ajudará a população em geral, diminuindo os animais em situação de rua, o abandono e possíveis doenças que podem ser transmitidas se os animais não estiverem em um local adequado. Dessa maneira, a ideia é aproximar quem tem interesse em aumentar sua família com um pet, dos animais disponíveis para a adoção.
 
 
 ## Problema
 
-&nbsp;&nbsp;&nbsp;&nbsp;Com a utilização de um software, como é possível aumentar a adoção de animais? 
-É necessário aumentar a adoção de animais.  O software será utilizado por uma empresa/ONG que tem como objetivo, aumentar o número de adoções disponibilizando assim para possível adotante a opção de conhecer os animais e suas personalidades através do software.
+&nbsp;&nbsp;&nbsp;&nbsp;Como aumentar a adoção de animais nas instituições que resgatam animais de rua?
+É necessário aumentar a adoção de animais.  O site será utilizado por uma empresa/ONG que tem como objetivo, aumentar o número de adoções, disponibilizando assim para possível adotante a opção de conhecer os animais e suas personalidades através do site.
 
 
 ## Objetivos
