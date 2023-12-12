@@ -72,7 +72,7 @@ Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo d
 
 ## Cores
 
-![Cores do site](img/colors.png)
+![Cores do site](img/AdobeColor-Petting.png)
 
 
 ## Tipografia
@@ -92,7 +92,7 @@ Definir foto de perfil
 
 Redirecionar para outra página
 
-![Redirecionar](img/botaoazul.png)
+![Redirecionar](img/botaoazul.jpeg)
 
 Redirecionar para o chat
 
@@ -105,10 +105,14 @@ Abrir configurações
 Botões de match
 
 ![like](img/iconheart.png)
-![preferido](img/iconstar.png)
 ![não](img/iconcircle.png)
+![preferido](img/iconstar.png)
 
 
+Setas retorno e enviar
+
+![Seta de volta](img/returnButton.png)
+![Seta de enviar](img/sendButton.png)
 
 
 Apresente os estilos CSS criados para cada um dos elementos apresentados.
