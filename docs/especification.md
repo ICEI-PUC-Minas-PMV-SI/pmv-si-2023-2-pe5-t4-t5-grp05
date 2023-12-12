@@ -1,7 +1,7 @@
 # Especificações do Projeto
 
 A adoção de animais é importante não só para a diminuição do número de animais abandonados, mas também para a qualidade de vida dos tutores. Uma das dificuldades que os adotantes enfrentam é ter acesso aos animais, pensando nisso iremos desenvolver uma plataforma que permita ao usuário ter acesso a uma lista de animais para possível adoção mediante ao cadastro do usuário. 
-A plataforma permitirá ao usuário filtrar os animais desejados, entre cães e gatos. Ao usuário será apresentada uma lista de animais, de acordo com suas especificações, onde será possível ver fotos e ler sobre detalhes sobre o animal desejado. A plataforma permitirá atendimento via contato direto com os responsáveis pelo resgate do animal para que seja tirada dúvidas e para que a adoção seja realizada. A plataforma permitirá ainda que a organização obtenha relatórios sobre as preferências dos usuários. A plataforma será desenvolvida usando HTML, CSS e JavaScript.
+O site permitirá ao usuário filtrar os animais desejados, entre cães e gatos. Ao usuário será apresentada uma lista de animais, de acordo com suas especificações, onde será possível ver fotos e ler sobre detalhes sobre o animal desejado. O site permitirá atendimento via contato direto com os responsáveis pelo resgate do animal para que seja tirada dúvidas e para que a adoção seja realizada. O site permitirá ainda que a organização obtenha relatórios sobre as preferências dos usuários. A plataforma será desenvolvida usando HTML, CSS e JavaScript.
 
 
 ## Personas
@@ -39,13 +39,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-002| Deve haver validação de dados para garantir que o endereço de e-mail seja único.  | ALTA | |
 |RF-003| Os usuários devem poder fazer login usando seu nome de usuário e senha registrados. |ALTA||
 |RF-004| O sistema deve exibir uma lista de animais disponíveis para adoção, incluindo fotos, nomes e descrições. |ALTA||
-|RF-005| Deve ser possível filtrar os animais por tipo (cães, gatos, etc.). |MÉDIA||
-|RF-006| Os usuários devem poder clicar em um perfil de animal para obter mais detalhes. |MÉDIA||
-|RF-007| Cada perfil de animal deve incluir um botão de "Contatar" que permita aos usuários enviar mensagens. |BAIXA||
-|RF-008| Deve haver uma caixa de entrada de mensagens onde os usuários possam acompanhar suas conversas. |BAIXA||
-|RF-009| O sistema deve coletar informações sobre as preferências dos usuários, como tipo de animal desejada. | MÉDIA ||
-|RF-0010| Com base nas preferências do usuário, o sistema deve recomendar animais compatíveis para adoção na página inicial. | MÉDIA ||
-|RF-0011| Os usuários podem atualizar suas preferências a qualquer momento. | MÉDIA ||
+|RF-005| Deve ser possível filtrar os animais por tipo (cães e gatos). |MÉDIA||
+|RF-006| Cada perfil de animal deve incluir um botão de "Contatar" que permita aos usuários enviar mensagens. |BAIXA||
+|RF-007| Deve haver uma caixa de entrada de mensagens onde os usuários possam acompanhar suas conversas. |BAIXA||
+|RF-008| O sistema deve coletar informações sobre as preferências dos usuários, como tipo de animal desejado. | MÉDIA ||
+|RF-009| Com base nas preferências do usuário, o sistema deve recomendar animais compatíveis para adoção na página inicial. | MÉDIA ||
+|RF-0010| Os usuários podem atualizar suas preferências a qualquer momento. | MÉDIA ||
+
 
 
 
@@ -57,7 +57,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-002| O sistema deve armazenar os dados do usuários. | ALTA ||
 |RNF-003| As imagens dos animais devem ser otimizadas para carregamento rápido. | MÉDIA ||
 |RNF-004| O algoritmo de recomendação deve ser eficiente e fornecer resultados relevantes. | MÉDIA ||
-|RNF-005| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA ||
+
 
 
 
