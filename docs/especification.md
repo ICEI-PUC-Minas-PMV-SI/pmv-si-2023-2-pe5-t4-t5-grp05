@@ -6,13 +6,13 @@ O site permitirá ao usuário filtrar os animais desejados, entre cães e gatos.
 
 ## Personas
 
-Roberto e Flávia são recém casados e acabaram de comprar um apartamento. Ambos são funcionários públicos e não possuem filhos. Buscam um cachorro pequeno como animal de companhia. O animal deve ser de pequeno porte devido às dimensões do apartamento. 
+Marcela é estudante e acabou de se mudar  para um apartamento. Ela busca um cachorro pequeno como animal de companhia. O animal deve ser de pequeno porte devido às dimensões do apartamento.
 
-A família Silva é uma família formada por pai, mãe, um filho e uma filha. Como moram em casa procuram um cachorro de grande porte para cuidar do terreno e fazer companhia para o seu outro cachorro. 
+Juliana é casada e tem uma filha. Como mora em casa com sua família, ela procura um casal de cachorros para cuidar do terreno e fazer companhia para a sua filha, já que o casal acredita que é benéfico para a criança ter contato com animais desde cedo.
 
-Helena é uma profissional liberal de 35 anos, solteira, que acabou de se mudar para uma grande cidade e se sente sozinha. Está à procura de um gato para lhe fazer companhia e sente que a adoção é o melhor caminho já que entende que existe muita crueldade nos criadores. 
+Eduardo é um profissional liberal de 27 anos, solteiro, que acabou de se mudar para uma grande cidade e se sente sozinho. Está à procura de um gato para lhe fazer companhia e sente que a adoção é o melhor caminho já que entende que existe muita crueldade nos criadores.
 
-Mario, 32, e Luiza, 30, acabaram de ter um filho. Moram em uma casa com pouco espaço e procuram um animal para fazer companhia tanto para Luiza que trabalha em casa quanto para a criança, ambos acreditam que é benéfico para as crianças terem contato com animais desde cedo. 
+Tiago e sua esposa moram em uma casa grande e procuram tanto cachorros quantos gatos para adotarem.
 
 
 ## Histórias de Usuários
