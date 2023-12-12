@@ -72,7 +72,7 @@ Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo d
 
 ## Cores
 
-![Cores do site](img/AdobeColor-Petting.png)
+![Cores do site](img/AdobeColor-Petting.jpeg)
 
 
 ## Tipografia
