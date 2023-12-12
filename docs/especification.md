@@ -42,10 +42,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-005| Deve ser possível filtrar os animais por tipo (cães e gatos). |MÉDIA||
 |RF-006| Cada perfil de animal deve incluir um botão de "Contatar" que permita aos usuários enviar mensagens. |BAIXA||
 |RF-007| Deve haver uma caixa de entrada de mensagens onde os usuários possam acompanhar suas conversas. |BAIXA||
-|RF-008| O sistema deve coletar informações sobre as preferências dos usuários, como tipo de animal desejado. | MÉDIA ||
-|RF-009| Com base nas preferências do usuário, o sistema deve recomendar animais compatíveis para adoção na página inicial. | MÉDIA ||
-|RF-0010| Os usuários podem atualizar suas preferências a qualquer momento. | MÉDIA ||
-
+|RF-008| Com base nas preferências do usuário, o sistema deve recomendar animais compatíveis para adoção na página inicial. | MÉDIA ||
+|RF-009| Os usuários podem atualizar suas preferências a qualquer momento. | MÉDIA ||
 
 
 
@@ -56,8 +54,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-001| A interface de registro deve ser intuitiva e de fácil uso para garantir que os usuários possam se inscrever sem dificuldade. | ALTA ||
 |RNF-002| O sistema deve armazenar os dados do usuários. | ALTA ||
 |RNF-003| As imagens dos animais devem ser otimizadas para carregamento rápido. | MÉDIA ||
-|RNF-004| O algoritmo de recomendação deve ser eficiente e fornecer resultados relevantes. | MÉDIA ||
-
 
 
 
