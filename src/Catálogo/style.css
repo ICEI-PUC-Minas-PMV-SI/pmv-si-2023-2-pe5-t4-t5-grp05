@@ -41,7 +41,7 @@ body {
     background: transparent;
   }
   
-  /* fundo azul da página de match */
+  /* fundo azul */
   .backgroundImage {
     position: absolute;
     top: 75px;
@@ -149,3 +149,39 @@ body {
     font-size: 20px;
     font-family: Roboto;
   }
+
+  /* fotos usuarios */
+
+.animal1 {
+  width: 100%;
+}
+
+.animal2 {
+  width: 100%;
+}
+
+.animal3 {
+  width: 100%;
+}
+.animal4 {
+  width: 100%;
+}
+.animal5 {
+  width: 100%;
+}
+.animal6 {
+  width: 100%;
+}
+.animal7 {
+  width: 100%;
+}
+.animal8 {
+  width: 100%;
+}
+.animal9 {
+  width: 100%;
+}
+.animal10 {
+  width: 100%;
+}
+
