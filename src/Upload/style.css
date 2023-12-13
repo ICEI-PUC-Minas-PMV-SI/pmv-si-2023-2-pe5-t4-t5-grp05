@@ -168,3 +168,19 @@ cursor: pointer;
 margin: auto;
 height: 30px;
 }
+
+.imagemImportar {
+margin: auto;
+width: 85%;
+height: 80%;
+background-color: #D9D9D9;
+text-align: center;
+color: #AAA;
+display: grid;
+grid-template-rows: auto auto;
+align-content: center;
+align-items: end;
+justify-items: center;
+z-index: 9999;
+    
+}
