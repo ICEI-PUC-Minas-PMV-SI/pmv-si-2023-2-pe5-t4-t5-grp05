@@ -64,8 +64,6 @@ grid-column: 2;
 margin: 0 auto;
 }
 
-
-
 .avatarButton {
 display: flex;
 align-items: center;
@@ -76,13 +74,9 @@ height: 40px;
 background-image: url('./public/avatar.png');
 background-size: cover;
 margin: 0 auto;
-z-index: 9999;
-cursor: pointer;
-/*visibility: hidden;*/
 }
 
-.avatarImagem {
-
+.avatarButton > img {
 display: flex;
 align-items: center;
 border: none;
@@ -90,7 +84,9 @@ border-radius: 100%;
 width: 40px;
 height: 40px;
 margin: 0 auto;
+margin-left: -6px;
 }
+
 
 
 .personButton {
@@ -124,7 +120,7 @@ border-radius: 100%;
     background-color: #bfcadc;
     border-radius: 40px;
     z-index: 9999; /* fazer o modal aparecer no top das outra paginas */
-   visibility: hidden;
+    visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   
@@ -152,7 +148,6 @@ border-radius: 100%;
     opacity: 1;
     visibility: visible;
   }
-
 
 
 
@@ -193,35 +188,6 @@ border: #D9D9D9 1px solid;
 border-radius: 100%;
 grid-column: 2;
 }
-
-
-/* CHAT*/
-
-.oEspacoDoChat {
-    max-height: calc(100%-160px);
-    margin: 0 auto;
-    padding: 20px;
-    }
-
-    
-
-    .mensagemQueChega {
-    background-color: #D9D9D9;
-    align-self: flex-start ;
-    border-radius: 10px;
-    width: 60%;
-    }
-
-
-    .mensagemQueVai {
-    background-color: #AAAAAA;
-    margin: auto;
-    margin-right: 0;
-    border-radius: 10px;
-    width: 60%;
-    }
-
-
 
 .caixaDeTexto {
 height: 100%;
