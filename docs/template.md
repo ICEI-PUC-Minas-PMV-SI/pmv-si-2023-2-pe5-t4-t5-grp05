@@ -68,6 +68,8 @@ Explique as guias de estilo utilizadas no seu projeto.
 ## Design
 ![Configurações](img/layoult.png)
 
+![Configurações](img/chatlayoult.png)
+
 Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
 
 
