@@ -24,7 +24,6 @@ Objetivos específicos:
 - Conscientizar sobre a importância da adoção de animais.
 - Aplicar os conhecimentos adquiridos para desenvolver o site.
 - Permitir que usuários possam se cadastrar e ter os dados verificados.
-- Permitir a vinculação de outras plataformas de natureza semelhante, para viabilizar a comunicação entre os usuários com objetivo de adoção de animais.
 - Aumentar o número de animais adotados.
 - Permitir ao usuário filtrar resultados de busca.
 
