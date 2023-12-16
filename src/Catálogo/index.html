@@ -10,91 +10,70 @@
 
 <body>
     <!-- CABEÇALHO -->
-<div class="header">
-   <div class="home">
-        <button>
-        <img src="./public/images/logo.png">
-        </button>
+    <div class="header">
+        <div class="home">
+            <button onclick="login()">
+                <img src="./public/images/logo.png">
+            </button>
+        </div>
     </div>
-</div>
 
-<!-- Background azul da página geral -->
-<div class="background">
-    <div class="home">   
+    <!-- Background azul da página geral -->
+    <div class="background">
+        <div class="home">
+        </div>
     </div>
-</div>
+    <button onclick="chat()" class="buttone">
 
-<div class="button">
-    <button class="buttone">
-       
     </button>
     <!-- BOTÃO MAIS PET AZUL -->
     <div class="button">
-        <button>
-        <div class="backgroundImageblue">
+        <button class="backgroundImageblue" onclick="addPet()">
             <p>+ PET</p>
         </button>
-        </div>
+    </div>
+    <div class="text">
+        <h1> Catálogo
+        </h1>
+    </div>
+    <div id="gridContainer" class="grid-container">
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        const imagemContainer = document.getElementById('gridContainer');
 
-<main>
-        <div class="text">
-            <h1> Catálogo
-            </h1>
-        </div> 
-        
-    </head>
-    <body>
-        <div class="grid-container">
-            <div class="grid-item">
-                <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal1"><img src="http://placekitten.com/200/200" alt="Photo 1"></div>
-                <p class="nome2">Jorge</p><p class="idade1">5 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal2"><img src="http://placekitten.com/200/200" alt="Photo 2"></div>
-                <p class="nome2">Sebastião</p><p class="idade2">6 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal3"><img src="http://placekitten.com/200/200" alt="Photo 3"></div>
-                <p class="nome3">Amora</p><p class="idade3"> 7 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal4"><img src="http://placekitten.com/200/200" alt="Photo 4"></div>
-                <p class="nome4">Fred</p><p class="idade4"> 2 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal5"><img src="http://placekitten.com/200/200" alt="Photo 5"></div>
-                <p class="nome5">Cacau</p><p class="idade5"> 3 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal6"><img src="http://placekitten.com/200/200" alt="Photo 6"></div>
-                <p class="nome6">Bruce</p><p class="idade6"> 4 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal7"><img src="http://placekitten.com/200/200" alt="Photo 7"></div>
-                <p class="nome7">Tom</p><p class="idade7"> 6 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal8"><img src="http://placekitten.com/200/200" alt="Photo 8"></div>
-                <p class="nome8">Princesa</p><p class="idade8"> 5 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal9"><img src="http://placekitten.com/200/200" alt="Photo 9"></div>
-                <p class="nome9">Zeus</p><p class="idade9"> 8 anos</p>
-            </div>
-            <div class="grid-item">
-            <button><img src="./public/images/engrenagem.png"></button>
-                <div class="animal10"><img src="http://placekitten.com/200/200" alt="Photo 10"></div>
-                <p class="nome10">Mel</p><p class="idade10"> 1 ano</p>
+        dataTemp.map((val) => {
+            const novoElemento = document.createElement('div');
+            novoElemento.className = 'grid-item';
+            novoElemento.innerHTML = `<button onclick="config(${val.id})"><img src="./public/images/engrenagem.png"></button>
+                        <div class="animal1"><img src="${val.url}" alt="Photo 1"></div>
+                        <p class="nome2">${val.name}</p>
+                        <p class="idade1">${val.year}</p>`;
 
-            </div>
-        </div>
-    </body>
+            imagemContainer.appendChild(novoElemento);
+        });
+    };
+
+    const addPet = () => {
+        if (localStorage.getItem("IdPet")) localStorage.removeItem("IdPet");
+        window.location.href = "../Upload/Upload.html";
+    };
+
+    const chat = () => {
+        window.location.href = "../Chat empresa pessoa/index.html";
+    };
+
+    const config = (val) => {
+        localStorage.setItem('IdPet', val);
+        window.location.href = "../Upload/Upload.html";
+    };
+
+    const login = () => {
+        window.location.href = "../Login/index.html"
+    };
+
+</script>
+
+</html>

@@ -1,90 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Home</title>
 </head>
+
 <body>
     <header>
-        
         <button class="homeButton">
-       
         </button>
-        
     </header>
     <main>
         <div class="backgroundImageLeft">
             <div id="cabecalho">
-                <button class="backButton">      
+                <button onclick="goBack()" class="backButton">
                 </button>
-                <button class="avatarButton" src="./public/avatar.png">
-                <img src="./public/avatar.png" alt="">
+                <button onclick="perfil()" class="avatarButton" src="/src/Perfil Usuário/perfilusuario.html">
                 </button>
             </div>
-            <div class="chatPeople">
-                <button class="personButton">
-                    <div class="avatar1"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome1"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar2"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome2"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar3"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome3"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar4"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome4"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar5"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome5"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar6"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome6"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar7"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome7"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar8"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome8"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar9"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome9"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar9"><img src="http://placekitten.com/200/200"></div>
-                    <div class="nome9"><p> Nome</p></div>
-                </button>
-                
-                
-                <div class="profile-modal">
-                    <label for="profile-modal" class="close-btn">&times;</label>
-                    <div class="profile-content">
-                    <!-- Informações das pessoas -->
-                    <h2>Perfil</h2>
-                    <p><strong>NOME:</strong> <p contenteditable="true">Julia</p></p>
-                    <p><strong>IDADE:</strong> <p contenteditable="true">32</p>
-                    <p><strong>ESPÉCIE DE PREFERÊNCIA:</strong> <p contenteditable="true">
-                    <select name="especie" id="especie">
-                        <option value="" disabled selected>ESPÉCIE DE PREFERÊNCIA</option>
-                        <option value="cachorro">CACHORRO</option>
-                        <option value="gato">GATO</option>
-                        <option value="ambos">AMBOS</option>
-                    </select>   
-                    <p><strong>E-MAIL:</strong> <p contenteditable="true">juliaborges@kittenmail.com</span></p>
-                    <p><strong>SENHA:</strong> <p contenteditable="true">********</span></p>
-                   
-                  </div>
-                </div>
+            <div id="chatPeople" class="chatPeople">
+
             </div>
             <div>
             </div>
@@ -98,13 +36,131 @@
                 </div>
             </div>
             <div>
+                <div id="oEspacoDoChat" class="oEspacoDoChat">
+                </div>
+
             </div>
             <div class="caixaDeTexto">
                 <input type="text" placeholder="Digite sua mensagem">
-                <button class="sendButton"> 
-                </button> 
+                <button onclick="chat()" class="sendButton">
+                </button>
             </div>
         </div>
     </main>
 </body>
+<script>
+    let idGlobal = null;
+    window.onload = function () {
+        if (localStorage.getItem('IdPetChat')) {
+            const data = JSON.parse(localStorage.getItem('Pets'));
+            const chatPeople = document.getElementById('chatPeople');
+
+            data.map((val, index) => {
+                if (val.chat) {
+                    const novoElemento = document.createElement('button');
+                    novoElemento.className = 'personButton';
+                    novoElemento.setAttribute('onclick', `chatPet(${index})`);
+                    novoElemento.innerHTML = `<div class="avatar1">
+                        <img src="${val.url}">
+                    </div>
+                    <div class="nome1">
+                        <p> ${val.name}</p>
+                    </div>`;
+
+                    chatPeople.appendChild(novoElemento);
+                }
+            });
+        };
+
+        if (JSON.parse(localStorage.getItem('chatSite'))) {
+            const data = JSON.parse(localStorage.getItem('chatSite'));
+            const imagemContainer = document.getElementById('oEspacoDoChat');
+            const id = localStorage.getItem('IdPetChat');
+
+            data.map((val) => {
+                if (val.IdPet === id.toString()) {
+                    if (val.user === "user") {
+                        const novoElemento = document.createElement('div');
+                        novoElemento.className = 'mensagemQueVai';
+                        novoElemento.innerHTML = `${val.chat}`;
+
+                        imagemContainer.appendChild(novoElemento);
+                    } else {
+                        const novoElemento = document.createElement('div');
+                        novoElemento.className = 'mensagemQueChega';
+                        novoElemento.innerHTML = `${val.chat}`;
+
+                        imagemContainer.appendChild(novoElemento);
+                    };
+                }
+            });
+        };
+    };
+
+    const chat = () => {
+        const inputValue = document.querySelectorAll('input');
+        const idUser = localStorage.getItem('idUser');
+        const chat = [];
+
+        if (localStorage.getItem('IdPetChat') && inputValue[0].value) {
+            const id = localStorage.getItem('IdPetChat');
+            if (JSON.parse(localStorage.getItem('chatSite'))) {
+                const data = JSON.parse(localStorage.getItem('chatSite'));
+
+                data.map((val, index) => {
+                    chat.push(val);
+                });
+            };
+            if (idGlobal != null) {
+                chat.push({ idUser: idUser, IdPet: id, user: "user", chat: inputValue[0].value });
+                window.localStorage.setItem("chatSite", JSON.stringify(chat));
+            } else {
+                chat.push({ idUser: idUser, IdPet: id, user: "user", chat: inputValue[0].value });
+                window.localStorage.setItem("chatSite", JSON.stringify(chat));
+            }
+            window.localStorage.setItem("chatSite", JSON.stringify(chat));
+            inputValue[0].value = "";
+            location.reload();
+        };
+    };
+
+    const chatPet = (id) => {
+        idGlobal = id + 1;
+        if (JSON.parse(localStorage.getItem('chatSite'))) {
+            const data = JSON.parse(localStorage.getItem('chatSite'));
+            const imagemContainer = document.getElementById('oEspacoDoChat');
+            imagemContainer.innerHTML = ""
+
+            data.map((val) => {
+                if (val.IdPet === idGlobal.toString()) {
+                    if (val.user === "user") {
+                        const novoElemento = document.createElement('div');
+                        novoElemento.className = 'mensagemQueVai';
+                        novoElemento.innerHTML = `${val.chat}`;
+
+                        imagemContainer.appendChild(novoElemento);
+                    } else {
+                        const novoElemento = document.createElement('div');
+                        novoElemento.className = 'mensagemQueChega';
+                        novoElemento.innerHTML = `${val.chat}`;
+
+                        imagemContainer.appendChild(novoElemento);
+                    };
+                };
+            });
+            window.localStorage.setItem("IdPetChat", idGlobal);
+        };
+    }
+
+    const goBack = () => {
+        localStorage.removeItem('IdPetChat');
+        window.location.href = "../Match page_Home/index.html";
+    };
+
+    const perfil = () => {
+        window.location.href = "../Perfil Usuário/perfilusuario.html"
+    }
+
+</script>
+
 </html>

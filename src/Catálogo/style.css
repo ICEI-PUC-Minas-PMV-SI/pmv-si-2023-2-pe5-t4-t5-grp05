@@ -1,108 +1,109 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-  }
-  
-  /* Cabeçalho */
-  .header {
-    position: absolute;
-    width: 100%;
-    height: 65px;
-    background-color: #fff;
-    z-index: 1;
-  }
-  
-  /* Background azul da página geral */
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #D7E0EA;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-  
-  /* Botão da Logo */
-  .home > button {
-    margin-left: 20px;
-    padding: 0%;
-    width: 55px;
-    height: 65px;
-    border: none;
-    background: transparent;
-  }
-  
-  /* fundo azul */
-  .backgroundImage {
-    position: absolute;
-    top: 75px;
-    left: 50%;
-    margin-left: -45%;
-    width: 90%;
-    height: 85%;
-    border-radius: 49px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(97, 116, 165, 0.20);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-  
-  /* Catálogo */
-  h1 {
-    position: absolute;
-    top: 6.75%;
-    left: 71%;
-    margin-left: -60%;
-    width: 177.738px;
-    height: 59.463px;
-    font-family: Roboto;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 2.000px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
-    gap: 5px; /* Adjust the gap between grid items */
-    padding:85px;
-    
-  }
-  
-  .grid-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(97, 116, 165, 0.2);
-    border-radius: 40px;
-  }
-  
-  .grid-item img {
-    max-width: 70%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10x;
-  }
-  
-  button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.header {
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+/* Background azul da página geral */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #d7e0ea;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Botão da Logo */
+.home > button {
+  margin-left: 20px;
+  padding: 0%;
+  width: 55px;
+  height: 65px;
+  border: none;
+  background: transparent;
+}
+
+/* fundo azul da página de match */
+.backgroundImage {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  height: 85%;
+  border-radius: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(97, 116, 165, 0.2);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Catálogo */
+h1 {
+  position: absolute;
+  top: 6.75%;
+  left: 71%;
+  margin-left: -60%;
+  width: 177.738px;
+  height: 59.463px;
+  font-family: Roboto;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grid-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 5px; /* Adjust the gap between grid items */
+  padding: 85px;
+  top: 60px;
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(97, 116, 165, 0.2);
+  border-radius: 40px;
+}
+
+.grid-item img {
+  max-width: 70%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10x;
+}
+
+button {
   padding: 1px;
   background: transparent;
   margin-left: 100px;
@@ -111,77 +112,43 @@ body {
   height: 35px;
   border-radius: 100%;
   border-color: transparent;
-  }
-  
-  /* Botão conversa (tres pontos) */
-  .buttone {
-    position: absolute;
-    top: 7.5%;
-    margin-left: 78%;
-    padding: 0%;
-    width: 50px;
-    height: 50px;
-    border: none;
-    background:transparent;
-    border-radius: 50px;
-    background-image: url(./public/images/chat.png);
-    background-size: cover;
-  }
-  
-  /* botão azul + pet*/
-  .backgroundImageblue{
-    position: absolute;
-    top: 75px;
-    left: 130%;
-    margin-left: -45%;
-    width: 128px;
-    height: 41px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 77px;
-    background: rgba(67, 142, 255, 0.78);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: 0;
-    font-weight: 400;
-    font-size: 20px;
-    font-family: Roboto;
-  }
-
-  /* fotos usuarios */
-
-.animal1 {
-  width: 100%;
 }
 
-.animal2 {
-  width: 100%;
+/* Botão conversa (tres pontos) */
+.buttone {
+  position: absolute;
+  top: 7.5%;
+  margin-left: 78%;
+  padding: 0%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  background-image: url(./public/images/chat.png);
+  background-size: cover;
+  z-index: 1;
 }
 
-.animal3 {
-  width: 100%;
+/* botão azul + pet*/
+.backgroundImageblue {
+  position: absolute;
+  top: 75px;
+  left: 130%;
+  margin-left: -45%;
+  width: 128px;
+  height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 77px;
+  background: rgba(67, 142, 255, 0.78);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: Roboto;
+  z-index: 1;
 }
-.animal4 {
-  width: 100%;
-}
-.animal5 {
-  width: 100%;
-}
-.animal6 {
-  width: 100%;
-}
-.animal7 {
-  width: 100%;
-}
-.animal8 {
-  width: 100%;
-}
-.animal9 {
-  width: 100%;
-}
-.animal10 {
-  width: 100%;
-}
-

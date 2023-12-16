@@ -15,15 +15,19 @@
     <div class="backgroundImage">
         <div class="container">
             <h1>Entrar</h1>
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="Senha">
-            <a href="../Register/index.html">Cadastrar-se</a>
-            <button>ACESSAR</button>
+            <form onsubmit="confirm(event)">
+                <input type="text" type="text" placeholder="Nome">
+                <input type="password" type="text" placeholder="Senha">
+                <a href="../Register/index.html">Cadastrar-se</a>
+                <button type="submit">ACESSAR</button>
+            </form>
         </div>
     </div>
 </body>
+
 <script>
     const confirm = (event) => {
+        event.preventDefault();
         const data = JSON.parse(localStorage.getItem('Data'));
         const inputValue = document.querySelectorAll('input');
         let stop = false
@@ -32,18 +36,21 @@
             if (stop) return;
 
             if (val.name === inputValue[0].value && val.password === inputValue[1].value) {
-                let user = { name: val.name, emai: val.email }
-                window.localStorage.setItem("User", JSON.stringify(user));
+                let idUser = index + 1;
+                window.localStorage.setItem("idUser", JSON.stringify(idUser));
                 stop = true;
-                alert("Login feito com sucesso");
+
+                if (val.cargo === "user") {
+                    window.location.href = "../Match page_Home/index.html";
+                } else {
+                    window.location.href = "../Catálogo/index.html";
+                };
             };
         });
 
         if (!stop) {
             alert("Usuario ou senha incorreta");
-        } else {
-            // window.location.href = "Coloque o caminho do arquivo aqui";
-        };
+        }
     };
 
 </script>

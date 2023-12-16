@@ -1,58 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pettingmatch</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-        <!-- CABEÇALHO -->
+    <!-- CABEÇALHO -->
     <div class="header">
-       <div class="home">
-            <button>
-            <img src="./Public/images/logo.png" alt="não foi possivel carregar a imagem.">
+        <div class="home">
+            <button onclick="goBack()">
+                <img src="./Public/images/logo.png" alt="não foi possivel carregar a imagem.">
             </button>
         </div>
     </div>
 
-        <!-- MATCHES -->
+    <!-- MATCHES -->
     <div class="background">
-    <div class="match">
-        <div class="backgroundImage"> 
-            <img src="./Public/images/dog.jpg" alt="não foi possivel carregar a imagem.">
+        <div class="match">
+            <div id="backgroundImage" class="backgroundImage">
+                <img src="https://i.pinimg.com/originals/5b/75/77/5b7577cc28b42c6548e7b9ed2f26f9e2.jpg"
+                    alt="não foi possivel carregar a imagem.">
+            </div>
         </div>
-    </div>
         <!-- TEXTO -->
-    <div class="apresentacao">
-        <div class="text">
-            <h1> Jorge, 3 anos
-            </h1>
-            <h2> Sou muito carinhoso. Gosto de lugares quentinhos, muito sol e água gelada. <br> Crianças tem um lugar especial o meu coração. Sou bastante brincalhão e adoro um carinho.
-            </h2>
+        <div class="apresentacao">
+            <div id="text" class="text">
+                <h1> Jorge, 3 anos
+                </h1>
+                <h2> Sou muito carinhoso. Gosto de lugares quentinhos, muito sol e água gelada. <br> Crianças tem um
+                    lugar especial o meu coração. Sou bastante brincalhão e adoro um carinho.
+                </h2>
+            </div>
         </div>
-    </div>
         <!-- BOTÕES MATCH -->
         <div class="button">
             <!-- BOTÃO CÍRCULO -->
-            <button class="buttonx">
+            <button onclick="remove()" class="buttonx">
                 <img src="./Public/images/iconcircle.png" alt="não foi possivel carregar a imagem.">
             </button>
             <!-- BOTÃO CORAÇÃO -->
-            <button class="buttonh">
+            <button onclick="love()" class="buttonh">
                 <img src="./Public/images/iconheart.png" alt="não foi possivel carregar a imagem.">
             </button>
             <!-- BOTÃO ESTRELA -->
-            <button class="buttone">
+            <button onclick="favorite()" class="buttone">
                 <img src="./Public/images/iconstar.png" alt="não foi possivel carregar a imagem.">
             </button>
             <!-- BOTÃO CHAT -->
-            <button class="buttonChat">
+            <button onclick="chat()" class="buttonChat">
             </button>
         </div>
-        
     </div>
-    
-        
 </body>
+<script>
+    let id = 0;
+    window.onload = function () {
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        const imagemContainer = document.getElementById('backgroundImage');
+        const text = document.getElementById('text');
+
+        for (let i = 0; i < dataTemp.length; i++) {
+            id = i;
+            if (!dataTemp[i].note) {
+                imagemContainer.innerHTML = `<img src="${dataTemp[i].url}" alt="não foi possivel carregar a imagem.">`;
+                text.innerHTML = `<h1> ${dataTemp[i].name}, ${dataTemp[i].year} anos</h1>
+                <h2> ${dataTemp[i].description}</h2>`;
+                break;
+            };
+        };
+    };
+
+    const remove = () => {
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        const imagemContainer = document.getElementById('backgroundImage');
+        const text = document.getElementById('text');
+
+        dataTemp[id].note = "skip"
+        window.localStorage.setItem("Pets", JSON.stringify(dataTemp));
+
+        id += 1;
+        imagemContainer.innerHTML = `<img src="${dataTemp[id].url}" alt="não foi possivel carregar a imagem.">`;
+        text.innerHTML = `<h1> ${dataTemp[id].name}, ${dataTemp[id].year} anos</h1>
+                <h2> ${dataTemp[id].description}</h2>`;
+    };
+
+    const love = () => {
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        const imagemContainer = document.getElementById('backgroundImage');
+        const text = document.getElementById('text');
+
+        dataTemp[id].note = "love"
+        window.localStorage.setItem("Pets", JSON.stringify(dataTemp));
+
+        id += 1;
+        imagemContainer.innerHTML = `<img src="${dataTemp[id].url}" alt="não foi possivel carregar a imagem.">`;
+        text.innerHTML = `<h1> ${dataTemp[id].name}, ${dataTemp[id].year} anos</h1>
+                <h2> ${dataTemp[id].description}</h2>`;
+    };
+
+    const favorite = () => {
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        const imagemContainer = document.getElementById('backgroundImage');
+        const text = document.getElementById('text');
+
+        dataTemp[id].note = "favorite"
+        window.localStorage.setItem("Pets", JSON.stringify(dataTemp));
+
+        id += 1;
+        imagemContainer.innerHTML = `<img src="${dataTemp[id].url}" alt="não foi possivel carregar a imagem.">`;
+        text.innerHTML = `<h1> ${dataTemp[id].name}, ${dataTemp[id].year} anos</h1>
+                <h2> ${dataTemp[id].description}</h2>`;
+    };
+
+    const chat = () => {
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        dataTemp[id].chat = true;
+        const idPets = id + 1;
+
+        window.localStorage.setItem("Pets", JSON.stringify(dataTemp));
+        window.localStorage.setItem("IdPetChat", JSON.stringify(idPets));
+        window.location.href = "../Chat pessoa para empresa/home.html";
+    };
+
+    const goBack = () => {
+        window.location.href = "../Login/index.html";
+    };
+
+</script>
+
 </html>

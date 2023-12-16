@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Empresa para usuario</title>
 </head>
+
 <body>
     <header>
         <button class="homeButton">
@@ -14,82 +16,185 @@
     <main>
         <div class="backgroundImageLeft">
             <div id="cabecalho">
-                <button class="backButton">      
+                <button onclick="goBack()" class="backButton">
                 </button>
                 <button class="avatarButton" src="./public/avatar.png">
                 </button>
             </div>
-            
+
             <!-- BOTÕES PARA A EMPRESA CLICAR PARA FALAR COM OS USUÁRIOS -->
             <!-- FOTOS DE PESSOAS E NOMES HUMANOS -->
 
-            <div class="chatPeople">
-                <button class="personButton">
-                    <div class="avatar1"><img src="./public/avatar.png"></div>
-                    <div class="nome1"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar2"><img src="./public/avatar.png"></div>
-                    <div class="nome2"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar3"><img src="./public/avatar.png"></div>
-                    <div class="nome3"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar4"><img src="./public/avatar.png"></div>
-                    <div class="nome4"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar5"><img src="./public/avatar.png"></div>
-                    <div class="nome5"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar6"><img src="./public/avatar.png"></div>
-                    <div class="nome6"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar7"><img src="./public/avatar.png"></div>
-                    <div class="nome7"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar8"><img src="./public/avatar.png"></div>
-                    <div class="nome8"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar9"><img src="./public/avatar.png"></div>
-                    <div class="nome9"><p> Nome</p></div>
-                </button>
-                <button class="personButton">
-                    <div class="avatar10"><img src="./public/avatar.png"></div>
-                    <div class="nome10"><p> Nome</p></div>
-                </button>
+            <div id="chatPeople" class="chatPeople">
             </div>
-            <div></div>      
-            </div>
+            <div></div>
+        </div>
         </div>
         <div class="backgroundImageRight">
             <div id="nomeNoTopo">
-                <div class="fotoTopo"><img class="logo" src="./public/avatar.png"></div>
+                <div id="fotoTopo" class="fotoTopo"><img class="logo" src="./public/avatar.png"></div>
                 <div id="text">
                     <!-- NOME DE PESSOAS -->
-                    <div class="nomeUsuario"><p> Nome usuário</p></div>
+                    <div class="nomeUsuario">
+                        <p> Nome usuário</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <div class="oEspacoDoChat">
-                    
-                        <div class="mensagemQueChega">oi</div> <br>
-                        <div class="mensagemQueVai">oi</div>
-                    
+                <div id="oEspacoDoChat" class="oEspacoDoChat">
+
                 </div>
             </div>
             <div class="caixaDeTexto">
                 <input type="text" placeholder="Digite sua mensagem">
-                <button class="sendButton"> 
-                </button> 
+                <button onclick="chat()" class="sendButton">
+                </button>
             </div>
         </div>
     </main>
 </body>
+<script>
+    let idGlobal = null;
+    window.onload = function () {
+        const data = JSON.parse(localStorage.getItem('Pets'));
+        const chatPeople = document.getElementById('chatPeople');
+        const id = localStorage.getItem('empresaId');
+        const dataUs = JSON.parse(localStorage.getItem('Data'));
+        const chatSite = JSON.parse(localStorage.getItem('chatSite'));
+        const imagemContainer = document.getElementById('fotoTopo');
+        const text = document.getElementById('text');
+
+        dataUs.map((val) => {
+            chatSite.map((val2) => {
+                if (val2.idUser.toString() === val.id.toString()) {
+                    if (val.url) {
+                        imagemContainer.innerHTML = `"<img class="logo" src="${val.url}" alt="error"`
+                    } else {
+                        imagemContainer.innerHTML = `<img class="logo" src="./public/avatar.png">`
+                    };
+                    text.innerHTML = `<div class="nomeUsuario">
+                        <p> ${dataUs[0].name}</p>
+                    </div>`;
+                };
+            });
+        });
+
+        data.map((val, index) => {
+            if (val.chat) {
+                const novoElemento = document.createElement('button');
+                novoElemento.className = 'personButton';
+                novoElemento.setAttribute('onclick', `chatPet(${val.id})`);
+                novoElemento.innerHTML = `<div class="avatar1">
+                        <img src="${val.url}">
+                    </div>
+                    <div class="nome1">
+                        <p> ${val.name}</p>
+                    </div>`;
+
+                chatPeople.appendChild(novoElemento);
+            };
+        });
+
+        if (localStorage.getItem('empresaId')) {
+            const textContainer = document.getElementById('oEspacoDoChat');
+            textContainer.innerHTML = "";
+
+            chatSite.map((val) => {
+                if (val.IdPet === id.toString()) {
+                    if (val.user === "user") {
+                        const novoElemento = document.createElement('div');
+                        novoElemento.className = 'mensagemQueChega';
+                        novoElemento.innerHTML = `${val.chat}`;
+
+                        textContainer.appendChild(novoElemento);
+                    } else {
+                        const novoElemento = document.createElement('div');
+                        novoElemento.className = 'mensagemQueVai';
+                        novoElemento.innerHTML = `${val.chat}`;
+
+                        textContainer.appendChild(novoElemento);
+                    };
+                };
+            });
+        }
+    };
+
+    const chat = () => {
+        const inputValue = document.querySelectorAll('input');
+        const idUser = localStorage.getItem('idUser');
+        const chat = [];
+
+        if (localStorage.getItem('empresaId') && inputValue[0].value) {
+            const id = localStorage.getItem('empresaId');
+            if (JSON.parse(localStorage.getItem('chatSite'))) {
+                const data = JSON.parse(localStorage.getItem('chatSite'));
+
+                data.map((val, index) => {
+                    chat.push(val);
+                });
+            };
+            if (idGlobal != null) {
+                chat.push({ idUser: idUser, IdPet: id, user: "admin", chat: inputValue[0].value });
+                window.localStorage.setItem("chatSite", JSON.stringify(chat));
+            } else {
+                chat.push({ idUser: idUser, IdPet: id, user: "admin", chat: inputValue[0].value });
+                window.localStorage.setItem("chatSite", JSON.stringify(chat));
+            }
+            window.localStorage.setItem("chatSite", JSON.stringify(chat));
+            inputValue[0].value = "";
+            location.reload();
+        };
+    };
+
+    const chatPet = (value) => {
+        const data = JSON.parse(localStorage.getItem('Data'));
+        const chatSite = JSON.parse(localStorage.getItem('chatSite'));
+        const imagemContainer = document.getElementById('fotoTopo');
+        const text = document.getElementById('text');
+
+        data.map((val) => {
+            chatSite.map((val2) => {
+                if (val2.IdPet.toString() === value.toString() && val2.idUser.toString() === val.id.toString()) {
+                    if (val.url) {
+                        imagemContainer.innerHTML = `"<img class="logo" src="${val.url}" alt="error"`
+                    } else {
+                        imagemContainer.innerHTML = `<img class="logo" src="./public/avatar.png">`
+                    };
+                    text.innerHTML = `<div class="nomeUsuario">
+                        <p> ${data[0].name}</p>
+                    </div>`;
+                };
+            });
+        });
+
+        const textContainer = document.getElementById('oEspacoDoChat');
+        textContainer.innerHTML = "";
+
+        chatSite.map((val) => {
+            if (val.IdPet === value.toString()) {
+                if (val.user === "user") {
+                    const novoElemento = document.createElement('div');
+                    novoElemento.className = 'mensagemQueChega';
+                    novoElemento.innerHTML = `${val.chat}`;
+
+                    textContainer.appendChild(novoElemento);
+                } else {
+                    const novoElemento = document.createElement('div');
+                    novoElemento.className = 'mensagemQueVai';
+                    novoElemento.innerHTML = `${val.chat}`;
+
+                    textContainer.appendChild(novoElemento);
+                };
+            };
+            window.localStorage.setItem("empresaId", value);
+        });
+    };
+
+    const goBack = () => {
+        localStorage.removeItem('empresaId');
+        window.location.href = "../Catálogo/index.html";
+    };
+
+</script>
+
 </html>

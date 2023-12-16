@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Perfil Usuário</title>
 </head>
+
 <body>
     <header>
         <button class="homeButton">
@@ -14,7 +16,7 @@
     <main>
         <div class="backgroundImageLeft">
             <div id="eTopo">
-                <button class="backButton"></button>
+                <button onclick="goBack()" class="backButton"></button>
                 <button class="avatarButton"></button>
                 <button class="engrenagem"></button>
             </div>
@@ -31,25 +33,129 @@
                 <input type="text" placeholder="SENHA">
             </div>
             <div id="eBaixo">
-                <button>Apagar Perfil</button>
+                <button onclick="remove()">Apagar Perfil</button>
             </div>
         </div>
         <div class="backgroundImageRight">
-            <div id="nomeNoTopo">
-                <img class="logo" src="./public/logoPetting.png">
-                <div id="text">
-                    <p> Petting
-                    </p>
-                </div>
+            <div id="faixaTopo">
             </div>
-            <div>
+            <div id="upload">
+                <label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="public/image-PhotoRoom 1.png" alt="">
             </div>
-            <div class="caixaDeTexto">
-                <input type="text" placeholder="Digite sua mensagem">
-                <button class="sendButton"> 
-                </button> 
+            <div id="faixaBaixo">
+                <button onclick="confirm()" class="confirma">Confirmar</button>
             </div>
         </div>
     </main>
 </body>
+<script>
+    window.onload = function () {
+        const id = localStorage.getItem("idUser") ? localStorage.getItem('idUser') - 1 : false;
+        const inputValue = document.querySelectorAll('input');
+        const select = document.getElementById('especie');
+        const imagemContainer = document.getElementById('upload');
+
+        if (localStorage.getItem("idUser")) {
+            const data = JSON.parse(localStorage.getItem('Data'));
+            inputValue[0].value = data[id].name;
+            inputValue[1].value = data[id].year ? data[id].year : null;
+            select.value = data[id].species ? data[id].species : "";
+            inputValue[2].value = data[id].email;
+            inputValue[3].value = data[id].password;
+
+            imagemContainer.innerHTML = `<label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="${data[id].url}" alt="error">`;
+        };
+    };
+
+    const confirm = () => {
+        const id = localStorage.getItem("idUser") ? localStorage.getItem('idUser') - 1 : false;
+        const inputValue = document.querySelectorAll('input');
+        const select = document.getElementById('especie');
+        const igmUser = localStorage.getItem('igmUser');
+        const dataTemp = localStorage.getItem("Data") ? JSON.parse(localStorage.getItem('Data')) : [];
+
+        if (/[a-zA-Z]/.test(inputValue[1].value) || /[\W_]/.test(inputValue[1].value)) return alert('O campo idade só pode ter números');
+
+        if (inputValue[0].value && inputValue[1].value && select.value && inputValue[2].value && localStorage.getItem('igmUser')) {
+
+            dataTemp[id].name = inputValue[0].value;
+            dataTemp[id].year = inputValue[1].value;
+            dataTemp[id].species = select.value;
+            dataTemp[id].email = inputValue[2].value;
+            dataTemp[id].password = inputValue[3].value;
+            dataTemp[id].url = igmUser;
+
+
+            window.localStorage.setItem("Data", JSON.stringify(dataTemp));
+            localStorage.removeItem('igmUser');
+            alert('Alteração feita com sucesso');
+            window.location.href = "../Match page_Home/index.html";
+        } else {
+            alert('todos os campos tem que estar preenchidos.');
+        }
+    };
+
+    const uploadInput = () => {
+        const inputFile = document.getElementById('arquivo');
+        const imagemContainer = document.getElementById('upload');
+
+        if (inputFile.files.length > 0) {
+            const imagem = inputFile.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const imagemSrc = e.target.result;
+
+                imagemContainer.innerHTML = `<label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="${imagemSrc}" alt="error">`;
+
+                localStorage.setItem('igmUser', imagemSrc);
+            };
+
+            reader.readAsDataURL(imagem);
+        } else {
+            alert('Por favor, selecione uma imagem.');
+        }
+    };
+
+    const remove = () => {
+        const id = localStorage.getItem("idUser") ? localStorage.getItem('idUser') - 1 : false;
+
+        if (localStorage.getItem("Data")) {
+            const dataTemp = JSON.parse(localStorage.getItem('Data'));
+            dataTemp.splice(id, 1);
+            window.localStorage.setItem("Data", JSON.stringify(dataTemp));
+        } else {
+            const inputValue = document.querySelectorAll('input');
+            const select = document.getElementById('especie');
+            const imagemContainer = document.getElementById('upload');
+
+            inputValue[0].value = "";
+            inputValue[1].value = "";
+            select.value = "";
+            inputValue[2].value = "";
+
+            imagemContainer.innerHTML = `<label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="public/image-PhotoRoom 1.png" alt="error">`;
+        }
+
+        window.location.href = "../Login/index.html";
+    };
+
+    const goBack = () => {
+        window.location.href = "../Chat pessoa para empresa/home.html";
+    };
+
+</script>
+
 </html>

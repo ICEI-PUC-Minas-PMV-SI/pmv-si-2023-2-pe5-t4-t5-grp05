@@ -1,32 +1,31 @@
-
 body {
-margin: 0%;
-background-color: #D7E0EA;
+  margin: 0%;
+  background-color: #d7e0ea;
 }
 
 header {
-width: 100%;
-height: 90px;
-background-color: white;
+  width: 100%;
+  height: 90px;
+  background-color: white;
 }
 
 .homeButton {
-border: none;
-width: 40px;
-height: 40px;
-margin-left: 20px;
-margin-top: 20px;
-background-image: url('./public/logoPetting.png');
-background-size: cover;
-background-color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-image: url("./public/logoPetting.png");
+  background-size: cover;
+  background-color: white;
 }
 
 main {
-height: calc(100vh - 90px);
-display: grid;
-grid-template-columns: auto 33% 1fr auto;
-column-gap: 3%;
-align-items: center;
+  height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: auto 33% 1fr auto;
+  column-gap: 3%;
+  align-items: center;
 }
 
 /* CORPO DO SITE */
@@ -34,241 +33,204 @@ align-items: center;
 /* PARTE DA ESQUERDA */
 
 .backgroundImageLeft {
-grid-column: 2;
-height: 90%;
-background-color: rgba(97, 116, 165, 0.2);
-border-radius: 40px;
-display: grid;
-grid-template-rows: 80px 1fr 80px;
+  grid-column: 2;
+  height: 90%;
+  background-color: rgba(97, 116, 165, 0.2);
+  border-radius: 40px;
+  display: grid;
+  grid-template-rows: 80px 1fr 80px;
 }
 
 .backgroundImageLeft > #cabecalho {
-height: 100%;
-display: grid;
-grid-template-columns: 0 50px auto;
-column-gap: 15px;
-align-items: center;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0 50px auto;
+  column-gap: 15px;
+  align-items: center;
 }
-    
 
 .backButton {
-display: flex;
-align-items: center;
-border: none;
-border-radius: 100px;
-width: 40px;
-height: 40px;
-background-image: url('./public/returnButton.png');
-background-size: cover;
-grid-column: 2;
-margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  background-image: url("./public/returnButton.png");
+  background-size: cover;
+  grid-column: 2;
+  margin: 0 auto;
 }
 
 .avatarButton {
-display: flex;
-align-items: center;
-border: none;
-border-radius: 100%;
-width: 40px;
-height: 40px;
-background-image: url('./public/avatar.png');
-background-size: cover;
-margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-image: url("./public/avatar.png");
+  background-size: cover;
+  margin: 0 auto;
 }
-
-.avatarButton > img {
-display: flex;
-align-items: center;
-border: none;
-border-radius: 100%;
-width: 40px;
-height: 40px;
-margin: 0 auto;
-margin-left: -6px;
-}
-
-
 
 .personButton {
-display: grid;
-grid-template-columns: auto 30% auto;
-width: 100%;
-height: 10%;
-align-items: center;
-background-color: #D9D9D9 ;
-border: #AAAAAA 1px solid;
+  display: grid;
+  grid-template-columns: auto 30% auto;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  background-color: #d9d9d9;
+  border: #aaaaaa 1px solid;
 }
 
-.personButton img{
-width: 40px;
-border-radius: 100%;
+.personButton img {
+  width: 40px;
+  border-radius: 100%;
 }
-
-
-/* Esconder a checkbox */
-/*.profile-modal-checkbox {
-    display: none;
-  }
-  
- /* Estilo do container */
- .profile-modal {
-    position: fixed;
-    top: 14%;
-    left: 3%;
-    height: 83.85%;
-    width: 33%;
-    background-color: #bfcadc;
-    border-radius: 40px;
-    z-index: 9999; /* fazer o modal aparecer no top das outra paginas */
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-  
-  /* CONTEÚDO DO MODAL */
-  .profile-content {
-    background-color: none;
-    padding: 0px;
-    border-radius: 40px;
-    text-align: center;
-    margin-top: 50%;
-  }
-  
-  /*BOTÃO DE FECHAR */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 26px;
-    color: black;
-  }
-  
-  /* Show the modal when checkbox is checked */
-  .profile-modal-checkbox:checked + .profile-modal {
-    opacity: 1;
-    visibility: visible;
-  }
-
-
 
 /* PARTE DA DIREITA */
 
-
 .backgroundImageRight {
-height: 90%;
-background-color: rgba(97, 116, 165, 0.2);
-border-radius: 40px;
-display: grid;
-grid-template-rows: 80px 1fr 80px;
+  height: 90%;
+  background-color: rgba(97, 116, 165, 0.2);
+  border-radius: 40px;
+  display: grid;
+  grid-template-rows: 80px 1fr 80px;
 }
 
 .backgroundImageRight > #nomeNoTopo {
-height: 100%;
-background-color: white;
-border-top-right-radius: 40px;
-border-top-left-radius: 40px;
-display: grid;
-grid-template-columns: 0 50px auto;
-column-gap: 15px;
-align-items: center;
+  height: 100%;
+  background-color: white;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  display: grid;
+  grid-template-columns: 0 50px auto;
+  column-gap: 15px;
+  align-items: center;
 }
 
 #text {
-font-family: Roboto;
-font-size: 20px;
-font-style: normal;
-text-overflow: inherit;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  text-overflow: inherit;
 }
 
-.logo  {
-width: 45px;
-height: 45px;
-margin: 0 auto;
-border: #D9D9D9 1px solid;
-border-radius: 100%;
-grid-column: 2;
+.logo {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  border: #d9d9d9 1px solid;
+  border-radius: 100%;
+  grid-column: 2;
+}
+
+/* CHAT*/
+
+.oEspacoDoChat {
+  max-height: calc(100%-160px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mensagemQueChega {
+  background-color: #d9d9d9;
+  align-self: flex-start;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 60%;
+}
+
+.mensagemQueVai {
+  background-color: #d9d9d9;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 60%;
 }
 
 .caixaDeTexto {
-height: 100%;
-background-color: #D9D9D9; 
-border-bottom-right-radius: 40px;
-border-bottom-left-radius: 40px;
+  height: 100%;
+  background-color: #d9d9d9;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
 }
 
 .caixaDeTexto {
-display: grid;
-grid-template-columns: auto 70% 20%;
-align-self: left;
-column-gap: 15px;
+  display: grid;
+  grid-template-columns: auto 70% 20%;
+  align-self: left;
+  column-gap: 15px;
 }
 
 .caixaDeTexto > input {
-border: 1px solid #D9D9D9;
-grid-column: 2;
-background-color: transparent;
+  border: 1px solid #d9d9d9;
+  grid-column: 2;
+  background-color: transparent;
 }
 
 .sendButton {
-display: flex;
-align-items: center;
-border: none;
-border-radius: 100px;
-width: 40px;
-height: 40px;
-background-image: url('./public/sendButton.png');
-background-size: cover;
-margin: auto;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  background-image: url("./public/sendButton.png");
+  background-size: cover;
+  margin: auto;
 }
 
 /* fotos usuarios */
 
 .avatar1 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar2 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar3 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar4 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar5 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar6 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar7 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar8 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar9 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .avatar10 {
-    width: 40px;
-    border-radius: 100%;
+  width: 40px;
+  border-radius: 100%;
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Upload</title>
 </head>
+
 <body>
     <header>
         <button class="homeButton">
@@ -14,15 +16,14 @@
     <main>
         <div class="backgroundImageLeft">
             <div id="eTopo">
-                <button class="backButton"></button>
+                <button onclick="goBack()" class="backButton"></button>
                 <button class="avatarButton"></button>
                 <button class="engrenagem"></button>
             </div>
             <div id="eMeio">
-                <input type="text" placeholder="# # ID DO ANIMAL">
                 <input type="text" placeholder="NOME">
                 <input type="text" placeholder="IDADE">
-                <select name="especie" id="especie">
+                <select id="select" name="especie" id="especie">
                     <option value="" disabled selected>ESPÉCIE</option>
                     <option value="cachorro">CACHORRO</option>
                     <option value="gato">GATO</option>
@@ -31,23 +32,128 @@
                 <input type="text" placeholder="DESCRIÇÃO">
             </div>
             <div id="eBaixo">
-                <button>Apagar Perfil</button>
+                <button onclick="remove()">Apagar Perfil</button>
             </div>
         </div>
         <div class="backgroundImageRight">
             <div id="faixaTopo">
             </div>
             <div id="upload">
-                    <div class="imagemImportar">
-                    <img class="importar" src="" alt="">
-                </div>
-                <p>ADICIONAR ARQUIVO AQUI<br>OU<br>IMPORTAR</p>
-                <img class="uploadAnimal" src="public/image-PhotoRoom 1.png" alt="">
+                <label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="public/image-PhotoRoom 1.png" alt="">
             </div>
             <div id="faixaBaixo">
-                <button class="confirma">Confirmar</button>
+                <button onclick="confirm()" class="confirma">Confirmar</button>
             </div>
         </div>
     </main>
 </body>
+<script>
+    window.onload = function () {
+        const id = localStorage.getItem("IdPet") ? localStorage.getItem('IdPet') - 1 : false;
+        const inputValue = document.querySelectorAll('input');
+        const select = document.getElementById('select');
+        const imagemContainer = document.getElementById('upload');
+
+        if (localStorage.getItem("IdPet")) {
+            const data = JSON.parse(localStorage.getItem('Pets'));
+            inputValue[0].value = data[id].name;
+            inputValue[1].value = data[id].year;
+            select.value = data[id].select;
+            inputValue[2].value = data[id].description;
+
+            imagemContainer.innerHTML = `<label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="${data[id].url}" alt="error">`;
+        };
+    };
+
+    const confirm = () => {
+        let data = [];
+        const inputValue = document.querySelectorAll('input');
+        const select = document.getElementById('select');
+        const caminhoImagem = localStorage.getItem('CaminhoImagem');
+        const dataTemp = localStorage.getItem("Pets") ? JSON.parse(localStorage.getItem('Pets')) : [];
+        const form = {
+            id: 1,
+            name: inputValue[0].value,
+            year: inputValue[1].value,
+            select: select.value,
+            description: inputValue[2].value,
+            url: caminhoImagem
+        };
+
+        if (/[\W_]/.test(inputValue[0].value) || /\d/.test(inputValue[0].value)) return alert('O campo nome não pode conter números e símbolos.');
+        if (/[a-zA-Z]/.test(inputValue[1].value) || /[\W_]/.test(inputValue[1].value)) return alert('O campo idade só pode ter números');
+
+        if (inputValue[0].value && inputValue[1].value && select.value && inputValue[2].value && localStorage.getItem('CaminhoImagem')) {
+            if (localStorage.getItem("Pets")) form.id = dataTemp.length + 1;
+
+            data = [...dataTemp, form];
+            window.localStorage.setItem("Pets", JSON.stringify(data));
+            localStorage.removeItem('CaminhoImagem');
+            alert('Upload feito com sucesso');
+            location.reload();
+        } else {
+            alert('todos os campos tem que estar preenchidos.');
+        }
+    };
+
+    const uploadInput = () => {
+        const inputFile = document.getElementById('arquivo');
+        const imagemContainer = document.getElementById('upload');
+
+        if (inputFile.files.length > 0) {
+            const imagem = inputFile.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const imagemSrc = e.target.result;
+
+                imagemContainer.innerHTML = `<label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="${imagemSrc}" alt="error">`;
+
+                localStorage.setItem('CaminhoImagem', imagemSrc);
+            };
+
+            reader.readAsDataURL(imagem);
+        } else {
+            alert('Por favor, selecione uma imagem.');
+        }
+    };
+
+    const remove = () => {
+        const id = localStorage.getItem("IdPet") ? localStorage.getItem('IdPet') - 1 : false;
+
+        if (localStorage.getItem("IdPet")) {
+            const dataTemp = JSON.parse(localStorage.getItem('Pets'));
+            dataTemp.splice(id, 1);
+        } else {
+            const inputValue = document.querySelectorAll('input');
+            const select = document.getElementById('select');
+            const imagemContainer = document.getElementById('upload');
+
+            inputValue[0].value = "";
+            inputValue[1].value = "";
+            select.value = "";
+            inputValue[2].value = "";
+
+            imagemContainer.innerHTML = `<label for="arquivo"></label>
+                <input onchange="uploadInput()" type="file" name="arquivo" id="arquivo">
+                <p>ADD A FILE HERE<br>OR<br>IMPORT</p>
+                <img class="uploadAnimal" id="imagemEscolhida" src="public/image-PhotoRoom 1.png" alt="error">`;
+        }
+    };
+
+    const goBack = () => {
+        window.location.href = "../Catálogo/index.html";
+    };
+
+</script>
+
 </html>
