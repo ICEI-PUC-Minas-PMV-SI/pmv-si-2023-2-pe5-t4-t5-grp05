@@ -4,7 +4,7 @@
 
 ## User Flow
 
-![userflow](img/userflow.png)
+![userflow](img/userflow2.png)
 
 
 
@@ -16,6 +16,17 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 ### Exemplo
 
 A tela Inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade.
+
+![telainicial](img/telainicial.png)
+![login](img/login.png)
+![cadastro](img/cadastro.png)
+![home](img/home.png)
+![chat1](img/chat1.png)
+![perfil](img/perfil.png)
+![chat2](img/chat2.png)
+![catalogo](img/catalogo.png)
+![upload](img/upload.png)
+
 
 ![Exemplo de Wireframe](img/wireframe-example.png)
 
