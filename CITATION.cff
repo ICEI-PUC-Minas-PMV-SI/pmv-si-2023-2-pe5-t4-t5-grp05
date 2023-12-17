@@ -1,29 +1,32 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title:
+title: Petting
 authors:
+  - family-names: Claudino Carvalho
+    given-names: Julio César 
+  - family-names: Garcia
+    given-names: João
+  - family-names: de Freitas Mendes Losque
+    given-names: Laura  
+  - family-names: Horta de Souza
+    given-names: Luana  
   - family-names:
     given-names:
   - family-names:
     given-names:
   - family-names:
     given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
+  - name-suffix: Professor Mestre 
     affiliation: PUC Minas
-    family-names:
-    given-names:
+    family-names: Jesus Daher de Oliveira.
+    given-names: Nesley
 keywords:
-  -
-  -
-repository-code:
+  -pet;
+  -adoção;
+  -site;
+  -cachorro;
+  -gato.
+repository-code: pmv-si-2023-2-pe5-t4-t5-grp05/
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2023-06-30
