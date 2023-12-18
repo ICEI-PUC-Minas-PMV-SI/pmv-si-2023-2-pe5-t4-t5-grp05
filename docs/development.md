@@ -20,7 +20,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-009| O sistema deve coletar informações sobre as preferências dos usuários, como tipo de animal desejada. | MÉDIA |chatusuarioParaEmpresa.html|
 |RF-0010| Com base nas preferências do usuário, o sistema deve recomendar animais compatíveis para adoção na página home. | MÉDIA |match.html|
 |RF-0011| Os usuários podem atualizar suas preferências a qualquer momento. | MÉDIA | chatusuarioParaEmpresa.html |
-
+|RF-0012| A instituição tem que ser capaz de colocar os animais. | ALTA | Upload.html |
 ## Descrição das estruturas:
 
 ## Notícia
