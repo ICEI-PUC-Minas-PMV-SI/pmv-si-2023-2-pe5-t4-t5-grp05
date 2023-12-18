@@ -43,7 +43,7 @@
 
 ## Registro dos Testes de Software
 
-O vídeo com as demonstrações está em ![Video](docs/Video.zip)
+O vídeo com as demonstrações está em ![Video](docs/Video.zip) e também foi enviado no Canva
 
 |                                 |*TC-01 - Criar uma conta                                        |
 |---|---|
