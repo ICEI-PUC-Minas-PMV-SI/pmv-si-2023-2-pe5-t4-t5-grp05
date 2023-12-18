@@ -27,11 +27,43 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 
 **Caso de Teste** | **CT01 - Criar conta parte 1**
  :--------------: | ------------
-**Procedimento**  | 1) Usuário informa nome, sobrenome, email, senha, Estado e Cidade e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
-**Requisitos associados** | RF-001
+**Procedimento**  | 1) Usuário informa nome, sobrenome, email, senha e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
+**Requisitos associados** | RF-001 RF-002
 **Resultado esperado** | Prosseguir para a parte 2 do cadastro.
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
 **Resultado obtido** | Sucesso.
+ :--------------: | ------------
+ **Procedimento**  | 2) Usuário informa email e senha e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
+**Requisitos associados** | RF-003
+**Resultado esperado** | Entrar no site.
+**Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
+**Resultado obtido** | Sucesso.
+ :--------------: | ------------
+**Procedimento**  | 3) Deve ser possível filtrar os animais por tipo (cães, gatos ou ambos).<br>2) A aplicação troca as preferências do usuário.
+**Requisitos associados** | RF-005
+**Resultado esperado** | Escolha de preferência.
+**Dados de entrada** | Inserção de preferência.
+**Resultado obtido** | Sucesso.
+ :--------------: | ------------
+ **Procedimento**  | 4) Deve haver uma caixa de entrada de mensagens onde os usuários possam acompanhar suas conversas.<br>2) A aplicação permite falar com a instituição.
+**Requisitos associados** | RF-008
+**Resultado esperado** | Falar com a instituição.
+**Dados de entrada** | Inserção de mensagens.
+**Resultado obtido** | Sucesso.
+:--------------: | ------------
+ **Procedimento**  | 5) Deve haver uma página para upload.<br>2) A aplicação permite a instituição a colocar os animais.
+**Requisitos associados** | 
+**Resultado esperado** | Fazer upload dos animais.
+**Dados de entrada** | Inserção de animais.
+**Resultado obtido** | Sucesso.
+:--------------: | ------------
+ **Procedimento**  | 6) Deve haver como escolher o pet que será falado sobre.<br>2) A aplicação permite a pessoa escolher o animal.
+**Requisitos associados** | RF-006
+**Resultado esperado** | Poder dar match no animal.
+**Dados de entrada** | Curtir animal.
+**Resultado obtido** | Sucesso.
+
+
 
 **Caso de Teste** | **CT02 - Criar conta parte 2**
  :--------------: | ------------
