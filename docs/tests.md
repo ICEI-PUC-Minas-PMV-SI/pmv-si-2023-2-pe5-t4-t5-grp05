@@ -124,7 +124,7 @@ Cenário 1: Você é uma pessoa que deseja adotar um bichinho. Encontre no site 
 | 2       | SIM             | 5                    | 38 segundos                  |
 | 3       | SIM             | 5                    | 26 segundos                  |
 |  |  |  |  |
-| **Média**     | 0%           | 0                | 0 segundos                           |
+| **Média**     | 100%           | 5                | 32 segundos                           |
 | **Tempo para conclusão pelo especialista** | SIM | 5 |9 segundos |
 
 
@@ -138,8 +138,8 @@ Cenário 2:  Você é uma pessoa que deseja ter um gato. Encontre no site um gat
 | 2       | SIM             | 5                    | 38 segundos                          |
 | 3       | SIM             | 5                    | 32 segundos                          |
 |  |  |  |  |
-| **Média**     | 0%           | 0                | 0 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 20 segundos |
+| **Média**     | 100%           | 5                | 0 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 36 segundos |
 
 
    A página principal poderia ser melhor para acessar.
